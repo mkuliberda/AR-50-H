@@ -119,9 +119,7 @@ int main(void)
 		HAL_GPIO_WritePin(GPIOD, LD4_Pin, GPIO_PIN_RESET);
 		HAL_Delay(1000);
 		if (pwm1 < 2100){
-			//HAL_TIM_PWM_ConfigChannel(&htim1,
 			TIM1->CCR1 = pwm1+=50;
-			//HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
 		}
 		else{
 			pwm1 = 900;
