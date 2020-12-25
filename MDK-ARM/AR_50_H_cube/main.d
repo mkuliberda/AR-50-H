@@ -34,3 +34,4 @@ ar_50_h_cube\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 ar_50_h_cube\main.o: ../Core/Inc/tim.h
 ar_50_h_cube\main.o: ../Core/Inc/usart.h
 ar_50_h_cube\main.o: ../Core/Inc/gpio.h
+ar_50_h_cube\main.o: C:\Keil\ARM\ARMCC\Bin\..\include\string.h

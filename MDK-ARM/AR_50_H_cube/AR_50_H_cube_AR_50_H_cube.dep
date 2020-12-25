@@ -1,7 +1,7 @@
 Dependencies for Project 'AR_50_H_cube', Target 'AR_50_H_cube': (DO NOT MODIFY !)
 F (startup_stm32f407xx.s)(0x5FE4851A)(--cpu Cortex-M4.fp -g --apcs=interwork --pd "__MICROLIB SETA 1"-I"E:\Programowanie\AR - 50 H\AR_50_H_cube\MDK-ARM\RTE"-IC:\Keil\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include--pd "__UVISION_VERSION SETA 521" --pd "_RTE_ SETA 1" --pd "STM32F407xx SETA 1"--list startup_stm32f407xx.lst --xref -o ar_50_h_cube\startup_stm32f407xx.o --depend ar_50_h_cube\startup_stm32f407xx.d)
-F (../Core/Src/main.c)(0x5FE48516)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I"E:\Programowanie\AR - 50 H\AR_50_H_cube\MDK-ARM\RTE"-IC:\Keil\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o ar_50_h_cube\main.o --omf_browse ar_50_h_cube\main.crf --depend ar_50_h_cube\main.d)
-I (../Core/Inc/main.h)(0x5FE48516)
+F (../Core/Src/main.c)(0x5FE5F042)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I"E:\Programowanie\AR - 50 H\AR_50_H_cube\MDK-ARM\RTE"-IC:\Keil\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o ar_50_h_cube\main.o --omf_browse ar_50_h_cube\main.crf --depend ar_50_h_cube\main.d)
+I (../Core/Inc/main.h)(0x5FE5DE9D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5FE37F31)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x5FE48516)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5FE37F31)
@@ -35,9 +35,10 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5FE37F31)
 I (../Core/Inc/tim.h)(0x5FE48514)
 I (../Core/Inc/usart.h)(0x5FE48514)
 I (../Core/Inc/gpio.h)(0x5FE48513)
+I (C:\Keil\ARM\ARMCC\include\string.h)(0x574EA096)
 F (../Core/Src/gpio.c)(0x5FE48513)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I"E:\Programowanie\AR - 50 H\AR_50_H_cube\MDK-ARM\RTE"-IC:\Keil\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o ar_50_h_cube\gpio.o --omf_browse ar_50_h_cube\gpio.crf --depend ar_50_h_cube\gpio.d)
 I (../Core/Inc/gpio.h)(0x5FE48513)
-I (../Core/Inc/main.h)(0x5FE48516)
+I (../Core/Inc/main.h)(0x5FE5DE9D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5FE37F31)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x5FE48516)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5FE37F31)
@@ -68,9 +69,9 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5FE37F31)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5FE37F31)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5FE37F31)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5FE37F31)
-F (../Core/Src/tim.c)(0x5FE48567)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I"E:\Programowanie\AR - 50 H\AR_50_H_cube\MDK-ARM\RTE"-IC:\Keil\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o ar_50_h_cube\tim.o --omf_browse ar_50_h_cube\tim.crf --depend ar_50_h_cube\tim.d)
+F (../Core/Src/tim.c)(0x5FE5DF53)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I"E:\Programowanie\AR - 50 H\AR_50_H_cube\MDK-ARM\RTE"-IC:\Keil\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o ar_50_h_cube\tim.o --omf_browse ar_50_h_cube\tim.crf --depend ar_50_h_cube\tim.d)
 I (../Core/Inc/tim.h)(0x5FE48514)
-I (../Core/Inc/main.h)(0x5FE48516)
+I (../Core/Inc/main.h)(0x5FE5DE9D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5FE37F31)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x5FE48516)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5FE37F31)
@@ -101,9 +102,9 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5FE37F31)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5FE37F31)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5FE37F31)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5FE37F31)
-F (../Core/Src/usart.c)(0x5FE48514)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I"E:\Programowanie\AR - 50 H\AR_50_H_cube\MDK-ARM\RTE"-IC:\Keil\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o ar_50_h_cube\usart.o --omf_browse ar_50_h_cube\usart.crf --depend ar_50_h_cube\usart.d)
+F (../Core/Src/usart.c)(0x5FE5E968)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I"E:\Programowanie\AR - 50 H\AR_50_H_cube\MDK-ARM\RTE"-IC:\Keil\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o ar_50_h_cube\usart.o --omf_browse ar_50_h_cube\usart.crf --depend ar_50_h_cube\usart.d)
 I (../Core/Inc/usart.h)(0x5FE48514)
-I (../Core/Inc/main.h)(0x5FE48516)
+I (../Core/Inc/main.h)(0x5FE5DE9D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5FE37F31)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x5FE48516)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5FE37F31)
@@ -134,8 +135,8 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5FE37F31)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5FE37F31)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5FE37F31)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5FE37F31)
-F (../Core/Src/stm32f4xx_it.c)(0x5FE48515)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I"E:\Programowanie\AR - 50 H\AR_50_H_cube\MDK-ARM\RTE"-IC:\Keil\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o ar_50_h_cube\stm32f4xx_it.o --omf_browse ar_50_h_cube\stm32f4xx_it.crf --depend ar_50_h_cube\stm32f4xx_it.d)
-I (../Core/Inc/main.h)(0x5FE48516)
+F (../Core/Src/stm32f4xx_it.c)(0x5FE5F129)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I"E:\Programowanie\AR - 50 H\AR_50_H_cube\MDK-ARM\RTE"-IC:\Keil\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o ar_50_h_cube\stm32f4xx_it.o --omf_browse ar_50_h_cube\stm32f4xx_it.crf --depend ar_50_h_cube\stm32f4xx_it.d)
+I (../Core/Inc/main.h)(0x5FE5DE9D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5FE37F31)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x5FE48516)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5FE37F31)
@@ -168,7 +169,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5FE37F31)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5FE37F31)
 I (../Core/Inc/stm32f4xx_it.h)(0x5FE48515)
 F (../Core/Src/stm32f4xx_hal_msp.c)(0x5FE48515)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I"E:\Programowanie\AR - 50 H\AR_50_H_cube\MDK-ARM\RTE"-IC:\Keil\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o ar_50_h_cube\stm32f4xx_hal_msp.o --omf_browse ar_50_h_cube\stm32f4xx_hal_msp.crf --depend ar_50_h_cube\stm32f4xx_hal_msp.d)
-I (../Core/Inc/main.h)(0x5FE48516)
+I (../Core/Inc/main.h)(0x5FE5DE9D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5FE37F31)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x5FE48516)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5FE37F31)

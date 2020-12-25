@@ -21,7 +21,7 @@
 #include "usart.h"
 
 /* USER CODE BEGIN 0 */
-
+uint8_t t[3] = {0,0,0};
 /* USER CODE END 0 */
 
 UART_HandleTypeDef huart2;
@@ -32,7 +32,7 @@ void MX_USART2_UART_Init(void)
 {
 
   huart2.Instance = USART2;
-  huart2.Init.BaudRate = 115200;
+  huart2.Init.BaudRate = 9600;
   huart2.Init.WordLength = UART_WORDLENGTH_8B;
   huart2.Init.StopBits = UART_STOPBITS_1;
   huart2.Init.Parity = UART_PARITY_NONE;
@@ -43,6 +43,7 @@ void MX_USART2_UART_Init(void)
   {
     Error_Handler();
   }
+	HAL_UART_Receive_IT(&huart2, t, 3);
 
 }
 
@@ -105,7 +106,15 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 }
 
 /* USER CODE BEGIN 1 */
-
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
+	
+	if(t[0] == '#' && t[2] == '$')
+	{
+		string_split((char*)t);
+	}
+	HAL_UART_Receive_IT(huart,t, 3);
+	
+}
 /* USER CODE END 1 */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

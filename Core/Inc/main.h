@@ -52,6 +52,7 @@ extern "C" {
 
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
+uint8_t string_split(char *data);// przetwarza odebrane dane z BLUETOOTH
 
 /* USER CODE BEGIN EFP */
 

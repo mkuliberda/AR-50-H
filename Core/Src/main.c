@@ -22,9 +22,43 @@
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
+#include "string.h"// funkcja sprintf, strcmp, strlen
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+
+/* USER CODE END Includes */
+
+/* Private typedef -----------------------------------------------------------*/
+/* USER CODE BEGIN PTD */
+typedef struct
+{
+	int16_t Servo1;
+}Controls;
+/* USER CODE END PTD */
+
+/* Private define ------------------------------------------------------------*/
+/* USER CODE BEGIN PD */
+#define SERVO1_STEP 50
+#define SERVO1_MAX 2100
+#define SERVO1_MIN 900
+#define SERVO1_NEUTRAL 1500
+/* USER CODE END PD */
+
+/* Private macro -------------------------------------------------------------*/
+/* USER CODE BEGIN PM */
+
+/* USER CODE END PM */
+
+/* Private variables ---------------------------------------------------------*/
+
+/* USER CODE BEGIN PV */
+Controls control;
+/* USER CODE END PV */
+
+/* Private function prototypes -----------------------------------------------*/
+void SystemClock_Config(void);
+/* USER CODE BEGIN PFP */
 void moveForward(void){
 	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_11, GPIO_PIN_SET);
 	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_RESET);
@@ -40,32 +74,59 @@ void stop(void){
 	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_11, GPIO_PIN_RESET);
 }
 
-/* USER CODE END Includes */
+uint8_t string_split(char *data)// przetwarza odebrane dane z BLUETOOTH
+{
+	uint32_t z=0;	
+	uint16_t Servo1PWM;
+	uint8_t ret_val = 1;
+	
+		if(!strcmp("#2$",data))
+		{
+			moveForward();
+			HAL_GPIO_WritePin(GPIOD, LD3_Pin, GPIO_PIN_SET);
+			HAL_GPIO_WritePin(GPIOD, LD6_Pin, GPIO_PIN_RESET);
+			ret_val = 0;
+		}
+		if(!strcmp("#4$",data))
+		{
+			if (control.Servo1 <= (SERVO1_MAX - SERVO1_NEUTRAL)) control.Servo1 += SERVO1_STEP;
+			HAL_GPIO_WritePin(GPIOD, LD4_Pin, GPIO_PIN_SET);
+			ret_val = 0;
+		}
+		if(!strcmp("#6$",data))
+		{
+			if (control.Servo1 >= (SERVO1_MIN - SERVO1_NEUTRAL)) control.Servo1 -= SERVO1_STEP;
+			HAL_GPIO_WritePin(GPIOD, LD5_Pin, GPIO_PIN_SET);
+			ret_val = 0;
+		}
+		if(!strcmp("#8$",data))
+		{
+			moveBackward();
+			HAL_GPIO_WritePin(GPIOD, LD3_Pin, GPIO_PIN_RESET);
+			HAL_GPIO_WritePin(GPIOD, LD6_Pin, GPIO_PIN_SET);
+			ret_val = 0;
+		}
+		if(!strcmp("#5$",data))
+		{
+			stop();
+			HAL_GPIO_WritePin(GPIOD, LD3_Pin, GPIO_PIN_RESET);
+			HAL_GPIO_WritePin(GPIOD, LD6_Pin, GPIO_PIN_RESET);
+			ret_val = 0;
+		}
+		
+		Servo1PWM=SERVO1_NEUTRAL+control.Servo1;
 
-/* Private typedef -----------------------------------------------------------*/
-/* USER CODE BEGIN PTD */
-
-/* USER CODE END PTD */
-
-/* Private define ------------------------------------------------------------*/
-/* USER CODE BEGIN PD */
-/* USER CODE END PD */
-
-/* Private macro -------------------------------------------------------------*/
-/* USER CODE BEGIN PM */
-
-/* USER CODE END PM */
-
-/* Private variables ---------------------------------------------------------*/
-
-/* USER CODE BEGIN PV */
-
-/* USER CODE END PV */
-
-/* Private function prototypes -----------------------------------------------*/
-void SystemClock_Config(void);
-/* USER CODE BEGIN PFP */
-
+		if(Servo1PWM > SERVO1_MAX)			Servo1PWM=SERVO1_MAX;
+		if(Servo1PWM < SERVO1_MIN)			Servo1PWM=SERVO1_MIN;
+			
+		TIM1->CCR1=Servo1PWM;
+	
+	for(z=0;z<strlen(data);z++)
+	{
+		data[z]='\0';
+	}
+	return ret_val;
+}
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -80,7 +141,6 @@ void SystemClock_Config(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-	int16_t pwm1 = 900;
 
   /* USER CODE END 1 */
 
@@ -114,16 +174,9 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-		HAL_GPIO_WritePin(GPIOD, LD4_Pin, GPIO_PIN_SET);
-		HAL_Delay(1000);
 		HAL_GPIO_WritePin(GPIOD, LD4_Pin, GPIO_PIN_RESET);
-		HAL_Delay(1000);
-		if (pwm1 < 2100){
-			TIM1->CCR1 = pwm1+=50;
-		}
-		else{
-			pwm1 = 900;
-		}
+		HAL_GPIO_WritePin(GPIOD, LD5_Pin, GPIO_PIN_RESET);
+		HAL_Delay(500);
 		
     /* USER CODE END WHILE */
 
